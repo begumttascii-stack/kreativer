@@ -1,0 +1,2401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kreativer Grünen Jugendakademieverein e.V. | Youth, Climate & Community</title>
+
+    <meta name="description"
+        content="Kreativer Grünen Jugendakademieverein e.V. is a non-profit youth organisation focusing on environmental protection, climate action, youth empowerment, inclusion and international cooperation.">
+
+    <meta name="keywords"
+        content="Kreativer Grünen, Jugendakademieverein, youth, climate action, environment, Erasmus+, youth exchange, Germany, NGO">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        :root {
+            --red: #941515;
+            --dark-red: #6f1010;
+            --gold: #d99a25;
+            --light-gold: #f2c76b;
+            --cream: #faf8f3;
+            --white: #ffffff;
+            --dark: #181818;
+            --gray: #666666;
+            --light-gray: #eeeeee;
+            --border: rgba(148, 21, 21, 0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: var(--white);
+            color: var(--dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .nav-container {
+            width: min(1200px, 92%);
+            margin: auto;
+            height: 88px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        /* LOGO SABİT */
+        .brand img {
+            width: 72px;
+            height: 72px;
+            object-fit: contain;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.15;
+        }
+
+        /* KREATIVER GRÜNEN KIRMIZI */
+        .brand-name {
+            font-family: "Playfair Display", serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--red);
+        }
+
+        /* ALT YAZI TAM SİYAH */
+        .brand-subtitle {
+            font-size: 10px;
+            color: #000000;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-top: 5px;
+            font-weight: 600;
+        }
+
+        .desktop-menu {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .desktop-menu a {
+            font-size: 14px;
+            font-weight: 600;
+            position: relative;
+            transition: 0.3s ease;
+        }
+
+        .desktop-menu a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: 0.3s ease;
+        }
+
+        .desktop-menu a:hover {
+            color: var(--red);
+        }
+
+        .desktop-menu a:hover::after {
+            width: 100%;
+        }
+
+        .language-switcher {
+            display: flex;
+            gap: 5px;
+            margin-left: 8px;
+        }
+
+        .language-switcher button {
+            border: 1px solid var(--border);
+            background: white;
+            padding: 6px 9px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .language-switcher button.active,
+        .language-switcher button:hover {
+            background: var(--red);
+            color: white;
+            border-color: var(--red);
+        }
+
+        .hamburger {
+            display: none;
+            width: 42px;
+            height: 42px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background: var(--dark);
+            transition: 0.3s;
+        }
+
+        .mobile-menu {
+            display: none;
+            background: white;
+            border-top: 1px solid var(--light-gray);
+            padding: 20px 5%;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 13px 0;
+            font-weight: 600;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .mobile-language {
+            display: flex;
+            gap: 8px;
+            padding-top: 18px;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.97) 0%,
+                    rgba(255,255,255,0.87) 40%,
+                    rgba(255,255,255,0.25) 75%,
+                    rgba(255,255,255,0.05) 100%
+                ),
+                url("ilk.webp") center/cover no-repeat;
+        }
+
+        .hero-content {
+            width: min(1200px, 92%);
+            margin: auto;
+            padding-top: 100px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-small {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--red);
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero-small::before {
+            content: "";
+            width: 35px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(45px, 6vw, 78px);
+            line-height: 1.08;
+            max-width: 700px;
+            color: var(--red);
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--dark);
+        }
+
+        .hero-description {
+            max-width: 580px;
+            font-size: 18px;
+            color: #444;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 25px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: var(--red);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--dark-red);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--red);
+            color: var(--red);
+        }
+
+        .btn-outline:hover {
+            background: var(--red);
+            color: white;
+        }
+
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        section {
+            padding: 110px 0;
+        }
+
+        .container {
+            width: min(1100px, 92%);
+            margin: auto;
+        }
+
+        .section-heading {
+            margin-bottom: 55px;
+        }
+
+        .section-label {
+            display: block;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .section-heading h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(36px, 5vw, 55px);
+            line-height: 1.15;
+            color: var(--red);
+        }
+
+        .section-heading p {
+            max-width: 650px;
+            color: var(--gray);
+            margin-top: 18px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: var(--cream);
+        }
+
+        .about-grid {
+            display: block;
+            max-width: 900px;
+        }
+
+        .about-image {
+            display: none;
+        }
+
+        .about-text {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .about-text p {
+            color: var(--gray);
+            margin-bottom: 18px;
+            max-width: 850px;
+        }
+
+        /* VISION KUTUSU */
+        .about-highlight {
+            margin-top: 32px;
+            padding: 24px 26px;
+            border-left: 4px solid var(--gold);
+            background: white;
+            max-width: 850px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        .about-highlight strong {
+            display: block;
+            color: var(--red);
+            font-family: "Playfair Display", serif;
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .about-highlight span {
+            display: block;
+            color: var(--gray);
+        }
+
+
+        /* =========================
+           FOCUS
+        ========================= */
+
+        .focus-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .focus-card {
+            padding: 35px 28px;
+            border: 1px solid var(--border);
+            background: white;
+            transition: 0.35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .focus-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gold);
+        }
+
+        .focus-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+        }
+
+        .focus-number {
+            display: none;
+        }
+
+        .focus-card h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 23px;
+            color: var(--red);
+            margin-bottom: 12px;
+        }
+
+        .focus-card p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           PROJECT
+        ========================= */
+
+        .projects {
+            background: var(--dark);
+            color: white;
+        }
+
+        .projects .section-heading h2 {
+            color: white;
+        }
+
+        .projects .section-heading p {
+            color: #cfcfcf;
+        }
+
+        .project-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: #242424;
+            overflow: hidden;
+        }
+
+        .project-main-image {
+            min-height: 560px;
+            background: url("parti.webp") center/cover no-repeat;
+        }
+
+        .project-content {
+            padding: 55px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .project-tag {
+            color: var(--light-gold);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .project-content h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 42px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .project-content p {
+            color: #d2d2d2;
+            margin-bottom: 25px;
+        }
+
+        .project-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .project-info div {
+            border-top: 1px solid #444;
+            padding-top: 12px;
+        }
+
+        .project-info span {
+            display: block;
+            font-size: 11px;
+            color: var(--light-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .project-info strong {
+            display: block;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           PROJECT GALLERY
+        ========================= */
+
+        .gallery {
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .gallery-item {
+            height: 210px;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.06);
+        }
+
+
+        /* =========================
+           TEAM
+        ========================= */
+
+        .team {
+            background: var(--cream);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .team-card {
+            background: white;
+            padding: 30px;
+            border: 1px solid var(--border);
+        }
+
+        .team-photo {
+            height: 260px;
+            background: #e9e5df;
+            background-position: center;
+            background-size: cover;
+            margin-bottom: 25px;
+        }
+
+        .team-card:nth-child(1) .team-photo {
+            background-image: url("ilayda.jpg");
+        }
+
+        .team-card:nth-child(2) .team-photo {
+            background-image: url("soren.jpg");
+        }
+
+        .team-card:nth-child(3) .team-photo {
+            background-image: url("eblutalip.jpg");
+        }
+
+        .team-card h3 {
+            font-family: "Playfair Display", serif;
+            color: var(--red);
+            font-size: 25px;
+        }
+
+        .team-role {
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 5px 0 15px;
+        }
+
+        .team-card p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           SPONSORS
+        ========================= */
+
+        .sponsors {
+            text-align: center;
+        }
+
+        .sponsors .section-heading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sponsors .section-heading p {
+            max-width: 760px;
+            margin: 18px auto 0;
+            color: #111111;
+            text-align: center;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        /* KESİNTİSİZ YATAY SPONSOR BANDI */
+        .sponsors-grid {
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            overflow: hidden;
+            position: relative;
+            padding: 10px 0;
+        }
+
+        .sponsors-track {
+            display: flex;
+            width: max-content;
+            flex-shrink: 0;
+            animation: sponsorSlide 24s linear infinite;
+            will-change: transform;
+        }
+
+        .sponsor-set {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-shrink: 0;
+            padding-right: 20px;
+        }
+
+        .sponsor {
+            width: 250px;
+            height: 150px;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            padding: 15px;
+            flex-shrink: 0;
+        }
+
+        .sponsor:hover {
+            border-color: var(--gold);
+        }
+
+        .sponsor img {
+            max-width: 75%;
+            max-height: 90px;
+            object-fit: contain;
+        }
+
+        /* TAMAMEN KESİNTİSİZ LOOP */
+        @keyframes sponsorSlide {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .sponsor span {
+            font-family: "Playfair Display", serif;
+            color: #888;
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: var(--red);
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .contact .section-label {
+            color: var(--light-gold);
+        }
+
+        .contact h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(40px, 5vw, 58px);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .contact-intro {
+            color: #f0dede;
+            max-width: 520px;
+        }
+
+        .contact-list {
+            margin-top: 35px;
+            display: grid;
+            gap: 22px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(255,255,255,0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--light-gold);
+        }
+
+        .contact-item small {
+            display: block;
+            color: var(--light-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .contact-item a,
+        .contact-item span {
+            font-size: 15px;
+        }
+
+        .contact-item a:hover {
+            color: var(--light-gold);
+        }
+
+        .contact-box {
+            background: white;
+            color: var(--dark);
+            padding: 40px;
+        }
+
+        .contact-box h3 {
+            font-family: "Playfair Display", serif;
+            color: var(--red);
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .contact-box p {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #111;
+            color: #aaa;
+            padding: 35px 0;
+        }
+
+        .footer-container {
+            width: min(1100px, 92%);
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-brand {
+            color: white;
+            font-family: "Playfair Display", serif;
+            font-size: 18px;
+        }
+
+        .footer-copy {
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .desktop-menu {
+                gap: 17px;
+            }
+
+            .about-grid {
+                gap: 45px;
+            }
+
+            .project-content {
+                padding: 40px;
+            }
+
+        }
+
+
+        @media (max-width: 800px) {
+
+            .nav-container {
+                height: 75px;
+            }
+
+            .brand img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .brand-name {
+                font-size: 15px;
+            }
+
+            .brand-subtitle {
+                font-size: 8px;
+                color: #000000;
+            }
+
+            .desktop-menu {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+
+            .hero {
+                min-height: 820px;
+
+                background:
+                    linear-gradient(
+                        180deg,
+                        rgba(255,255,255,0.93) 0%,
+                        rgba(255,255,255,0.78) 45%,
+                        rgba(255,255,255,0.15) 100%
+                    ),
+                    url("hero.jpg") center/cover no-repeat;
+
+                align-items: flex-start;
+            }
+
+            .hero-content {
+                padding-top: 160px;
+            }
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            .about-grid,
+            .project-card,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                display: none;
+            }
+
+            .about-text {
+                width: 100%;
+            }
+
+            .focus-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .project-main-image {
+                min-height: 400px;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            /* Sponsorlar mobilde de kayan bant olarak kalır */
+            .sponsors-grid {
+                width: 100vw;
+                margin-left: calc(50% - 50vw);
+            }
+
+            .sponsor-set {
+                gap: 15px;
+                padding-right: 15px;
+            }
+
+            .sponsor {
+                width: 210px;
+                height: 135px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .contact-grid {
+                gap: 40px;
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .brand-text {
+                max-width: 180px;
+            }
+
+            .brand img {
+                width: 56px;
+                height: 56px;
+            }
+
+            .hero {
+                min-height: 780px;
+            }
+
+            .hero-content {
+                padding-top: 145px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero-small {
+                font-size: 10px;
+                letter-spacing: 1.5px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .section-heading {
+                margin-bottom: 38px;
+            }
+
+            .focus-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .focus-card {
+                padding: 30px 24px;
+            }
+
+            .project-content {
+                padding: 30px 24px;
+            }
+
+            .project-content h3 {
+                font-size: 34px;
+            }
+
+            .project-info {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+
+            .gallery-item {
+                height: 160px;
+            }
+
+            .contact-box {
+                padding: 28px 22px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .sponsor {
+                width: 190px;
+                height: 125px;
+            }
+
+            .about-highlight {
+                padding: 20px 20px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header>
+
+        <div class="nav-container">
+
+            <a href="#home" class="brand">
+
+                <img src="logo-kreativer.webp"
+                    alt="Kreativer Grünen Jugendakademieverein Logo">
+
+                <div class="brand-text">
+
+                    <span class="brand-name">
+                        Kreativer Grünen
+                    </span>
+
+                    <span class="brand-subtitle">
+                        Jugendakademieverein e.V.
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <nav class="desktop-menu">
+
+                <a href="#home"
+                    data-en="Home"
+                    data-tr="Ana Sayfa">
+                    Home
+                </a>
+
+                <a href="#about"
+                    data-en="About Us"
+                    data-tr="Hakkımızda">
+                    About Us
+                </a>
+
+                <a href="#focus"
+                    data-en="Our Focus"
+                    data-tr="Odak Alanlarımız">
+                    Our Focus
+                </a>
+
+                <a href="#projects"
+                    data-en="Projects"
+                    data-tr="Projeler">
+                    Projects
+                </a>
+
+                <a href="#sponsors"
+                    data-en="Sponsors"
+                    data-tr="Sponsorlarımız">
+                    Sponsors
+                </a>
+
+                <a href="#contact"
+                    data-en="Contact"
+                    data-tr="İletişim">
+                    Contact
+                </a>
+
+
+                <div class="language-switcher">
+
+                    <button class="lang-btn active"
+                        data-lang="en">
+                        EN
+                    </button>
+
+                    <button class="lang-btn"
+                        data-lang="tr">
+                        TR
+                    </button>
+
+                </div>
+
+            </nav>
+
+
+            <button class="hamburger"
+                id="hamburger"
+                aria-label="Open menu">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+
+        <div class="mobile-menu"
+            id="mobileMenu">
+
+            <a href="#home"
+                data-en="Home"
+                data-tr="Ana Sayfa">
+                Home
+            </a>
+
+            <a href="#about"
+                data-en="About Us"
+                data-tr="Hakkımızda">
+                About Us
+            </a>
+
+            <a href="#focus"
+                data-en="Our Focus"
+                data-tr="Odak Alanlarımız">
+                Our Focus
+            </a>
+
+            <a href="#projects"
+                data-en="Projects"
+                data-tr="Projeler">
+                Projects
+            </a>
+
+            <a href="#sponsors"
+                data-en="Sponsors"
+                data-tr="Sponsorlarımız">
+                Sponsors
+            </a>
+
+            <a href="#contact"
+                data-en="Contact"
+                data-tr="İletişim">
+                Contact
+            </a>
+
+
+            <div class="mobile-language">
+
+                <button class="lang-btn active"
+                    data-lang="en">
+                    EN
+                </button>
+
+                <button class="lang-btn"
+                    data-lang="tr">
+                    TR
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <main>
+
+        <section class="hero"
+            id="home">
+
+            <div class="hero-content">
+
+                <div class="hero-small"
+                    data-en="Youth • Environment • Community"
+                    data-tr="Gençlik • Çevre • Toplum">
+
+                    Youth • Environment • Community
+
+                </div>
+
+
+                <h1
+                    data-en="Empowering Young People. Shaping a Better Future."
+                    data-tr="Gençleri Güçlendiriyor, Daha İyi Bir Gelecek İnşa Ediyoruz.">
+
+                    Empowering Young People.
+                    <span>Shaping a Better Future.</span>
+
+                </h1>
+
+
+                <p class="hero-description"
+                    data-en="We bring young people together through environmental action, international cooperation, non-formal education and inclusive youth work."
+                    data-tr="Gençleri çevre çalışmaları, uluslararası iş birlikleri, yaygın eğitim ve kapsayıcı gençlik çalışmaları aracılığıyla bir araya getiriyoruz.">
+
+                    We bring young people together through environmental action,
+                    international cooperation, non-formal education and inclusive
+                    youth work.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="#about"
+                        class="btn btn-primary"
+                        data-en="Discover Our Work"
+                        data-tr="Çalışmalarımızı Keşfedin">
+
+                        Discover Our Work
+
+                    </a>
+
+                    <a href="#contact"
+                        class="btn btn-outline"
+                        data-en="Get in Touch"
+                        data-tr="İletişime Geçin">
+
+                        Get in Touch
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ABOUT
+        ========================= -->
+
+        <section class="about"
+            id="about">
+
+            <div class="container">
+
+                <div class="about-grid">
+
+                    <div class="about-text">
+
+                        <div class="section-heading">
+
+                            <span class="section-label"
+                                data-en="About Us"
+                                data-tr="Hakkımızda">
+
+                                About Us
+
+                            </span>
+
+                            <h2
+                                data-en="Youth at the heart of change."
+                                data-tr="Değişimin merkezinde gençler.">
+
+                                Youth at the heart of change.
+
+                            </h2>
+
+                        </div>
+
+
+                        <p
+                            data-en="Kreativer Grünen Jugendakademieverein e.V. is a non-profit, non-governmental organisation founded in Germany in 2024."
+                            data-tr="Kreativer Grünen Jugendakademieverein e.V., 2024 yılında Almanya'da kurulmuş kâr amacı gütmeyen ve hükümet dışı bir kuruluştur.">
+
+                            Kreativer Grünen Jugendakademieverein e.V. is a
+                            non-profit, non-governmental organisation founded in
+                            Germany in 2024.
+
+                        </p>
+
+
+                        <p
+                            data-en="Based in Pinneberg and Hamburg, our organisation brings together people from different cultural backgrounds and works to create inclusive opportunities for young people."
+                            data-tr="Pinneberg ve Hamburg merkezli kuruluşumuz, farklı kültürel geçmişlerden insanları bir araya getirerek gençler için kapsayıcı fırsatlar oluşturmayı amaçlamaktadır.">
+
+                            Based in Pinneberg and Hamburg, our organisation
+                            brings together people from different cultural
+                            backgrounds and works to create inclusive
+                            opportunities for young people.
+
+                        </p>
+
+
+                        <p
+                            data-en="Our work combines environmental protection and climate action with youth empowerment, democratic participation, human rights, gender equality and social inclusion."
+                            data-tr="Çalışmalarımız çevre koruma ve iklim eylemini; gençlerin güçlendirilmesi, demokratik katılım, insan hakları, toplumsal cinsiyet eşitliği ve sosyal kapsayıcılık ile bir araya getiriyor.">
+
+                            Our work combines environmental protection and
+                            climate action with youth empowerment, democratic
+                            participation, human rights, gender equality and
+                            social inclusion.
+
+                        </p>
+
+
+                        <div class="about-highlight">
+
+                            <strong
+                                data-en="Our vision:"
+                                data-tr="Vizyonumuz:">
+
+                                Our vision:
+
+                            </strong>
+
+                            <span
+                                data-en="Young people who are confident, responsible, environmentally conscious and actively engaged in their communities."
+                                data-tr="Kendine güvenen, sorumluluk sahibi, çevre bilincine sahip ve topluluklarında aktif rol alan gençler.">
+
+                                Young people who are confident, responsible,
+                                environmentally conscious and actively engaged
+                                in their communities.
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             FOCUS
+        ========================= -->
+
+        <section id="focus">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label"
+                        data-en="What We Focus On"
+                        data-tr="Neye Odaklanıyoruz">
+
+                        What We Focus On
+
+                    </span>
+
+                    <h2
+                        data-en="Building stronger communities through young people."
+                        data-tr="Gençler aracılığıyla daha güçlü topluluklar oluşturuyoruz.">
+
+                        Building stronger communities through young people.
+
+                    </h2>
+
+                    <p
+                        data-en="Our activities connect environmental responsibility with personal development, inclusion and international cooperation."
+                        data-tr="Faaliyetlerimiz çevresel sorumluluğu kişisel gelişim, kapsayıcılık ve uluslararası iş birliğiyle birleştiriyor.">
+
+                        Our activities connect environmental responsibility
+                        with personal development, inclusion and international
+                        cooperation.
+
+                    </p>
+
+                </div>
+
+
+                <div class="focus-grid">
+
+
+                    <div class="focus-card">
+
+                        <h3
+                            data-en="Environment &amp; Climate"
+                            data-tr="Çevre ve İklim">
+
+                            Environment &amp; Climate
+
+                        </h3>
+
+                        <p
+                            data-en="We encourage young people to understand environmental challenges and take action for climate protection and nature."
+                            data-tr="Gençleri çevresel sorunları anlamaya ve iklimin ve doğanın korunması için harekete geçmeye teşvik ediyoruz.">
+
+                            We encourage young people to understand
+                            environmental challenges and take action for
+                            climate protection and nature.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="focus-card">
+
+                        <h3
+                            data-en="Youth Empowerment"
+                            data-tr="Gençlerin Güçlendirilmesi">
+
+                            Youth Empowerment
+
+                        </h3>
+
+                        <p
+                            data-en="We support young people in developing confidence, leadership, entrepreneurial, digital and creative skills."
+                            data-tr="Gençlerin özgüven, liderlik, girişimcilik, dijital ve yaratıcı becerilerini geliştirmelerini destekliyoruz.">
+
+                            We support young people in developing confidence,
+                            leadership, entrepreneurial, digital and creative
+                            skills.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="focus-card">
+
+                        <h3
+                            data-en="Inclusion &amp; Equality"
+                            data-tr="Kapsayıcılık ve Eşitlik">
+
+                            Inclusion &amp; Equality
+
+                        </h3>
+
+                        <p
+                            data-en="We create accessible opportunities for migrants, disadvantaged youth, minorities and people with fewer opportunities."
+                            data-tr="Göçmenler, dezavantajlı gençler, azınlıklar ve daha az fırsata sahip kişiler için erişilebilir fırsatlar oluşturuyoruz.">
+
+                            We create accessible opportunities for migrants,
+                            disadvantaged youth, minorities and people with
+                            fewer opportunities.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="focus-card">
+
+                        <h3
+                            data-en="International Cooperation"
+                            data-tr="Uluslararası İş Birliği">
+
+                            International Cooperation
+
+                        </h3>
+
+                        <p
+                            data-en="Through Erasmus+ and international mobility, we connect young people and organisations across Europe."
+                            data-tr="Erasmus+ ve uluslararası hareketlilik aracılığıyla Avrupa genelinde gençleri ve kuruluşları bir araya getiriyoruz.">
+
+                            Through Erasmus+ and international mobility, we
+                            connect young people and organisations across
+                            Europe.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="focus-card">
+
+                        <h3
+                            data-en="Arts &amp; Culture"
+                            data-tr="Sanat ve Kültür">
+
+                            Arts &amp; Culture
+
+                        </h3>
+
+                        <p
+                            data-en="We use music, theatre, dance and cultural activities to encourage creativity, confidence and active participation."
+                            data-tr="Müzik, tiyatro, dans ve kültürel faaliyetleri yaratıcılığı, özgüveni ve aktif katılımı desteklemek için kullanıyoruz.">
+
+                            We use music, theatre, dance and cultural activities
+                            to encourage creativity, confidence and active
+                            participation.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="focus-card">
+
+                        <h3
+                            data-en="Sports &amp; Well-being"
+                            data-tr="Spor ve İyi Yaşam">
+
+                            Sports &amp; Well-being
+
+                        </h3>
+
+                        <p
+                            data-en="We promote sports and healthy lifestyles as tools for teamwork, resilience, well-being and social inclusion."
+                            data-tr="Sporu ve sağlıklı yaşamı takım çalışması, dayanıklılık, iyi yaşam ve sosyal kapsayıcılık için araçlar olarak destekliyoruz.">
+
+                            We promote sports and healthy lifestyles as tools
+                            for teamwork, resilience, well-being and social
+                            inclusion.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PROJECTS
+        ========================= -->
+
+        <section class="projects"
+            id="projects">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label"
+                        data-en="Our Project"
+                        data-tr="Projemiz">
+
+                        Our Project
+
+                    </span>
+
+                    <h2
+                        data-en="Learning, connecting and taking action."
+                        data-tr="Öğreniyor, bağlantı kuruyor ve harekete geçiyoruz.">
+
+                        Learning, connecting and taking action.
+
+                    </h2>
+
+                    <p
+                        data-en="Our international youth work creates opportunities for young people to learn from each other and work together."
+                        data-tr="Uluslararası gençlik çalışmalarımız gençlerin birbirlerinden öğrenmeleri ve birlikte çalışmalarını sağlayan fırsatlar oluşturuyor.">
+
+                        Our international youth work creates opportunities for
+                        young people to learn from each other and work together.
+
+                    </p>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <div class="project-main-image">
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <span class="project-tag">
+                            Erasmus+ Youth Exchange
+                        </span>
+
+                        <h3>
+                            Nature Saviors
+                        </h3>
+
+                        <p
+                            data-en="Nature Saviors was an Erasmus+ Youth Exchange project implemented in Berlin. The project brought young people together around environmental awareness, learning and cooperation."
+                            data-tr="Nature Saviors, Berlin'de gerçekleştirilen bir Erasmus+ Gençlik Değişimi projesidir. Proje, gençleri çevre bilinci, öğrenme ve iş birliği etrafında bir araya getirmiştir.">
+
+                            Nature Saviors was an Erasmus+ Youth Exchange project
+                            implemented in Berlin. The project brought young
+                            people together around environmental awareness,
+                            learning and cooperation.
+
+                        </p>
+
+
+                        <div class="project-info">
+
+                            <div>
+
+                                <span>
+                                    Project
+                                </span>
+
+                                <strong>
+                                    Nature Saviors
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Project No.
+                                </span>
+
+                                <strong>
+                                    2024-1-DE04-KA152-YOU-000217934
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Location
+                                </span>
+
+                                <strong>
+                                    Berlin, Germany
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Date
+                                </span>
+
+                                <strong>
+                                    24 Nov – 1 Dec 2024
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="gallery">
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="exchange.webp"
+                            alt="Nature Saviors project">
+
+                    </div>
+
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="activity.webp"
+                            alt="Nature Saviors youth exchange">
+
+                    </div>
+
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="proje.webp"
+                            alt="Nature Saviors participants">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             TEAM
+        ========================= -->
+
+        <section class="team">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label"
+                        data-en="Our Team"
+                        data-tr="Ekibimiz">
+
+                        Our Team
+
+                    </span>
+
+                    <h2
+                        data-en="People behind the work."
+                        data-tr="Çalışmalarımızın arkasındaki ekip.">
+
+                        People behind the work.
+
+                    </h2>
+
+                    <p
+                        data-en="Our team brings together experience in youth work, international cooperation, education, communication and project management."
+                        data-tr="Ekibimiz gençlik çalışmaları, uluslararası iş birliği, eğitim, iletişim ve proje yönetimi alanlarında deneyimleri bir araya getiriyor.">
+
+                        Our team brings together experience in youth work,
+                        international cooperation, education, communication
+                        and project management.
+
+                    </p>
+
+                </div>
+
+
+                <div class="team-grid">
+
+
+                    <div class="team-card">
+
+                        <div class="team-photo"></div>
+
+                        <h3>
+                            Ilayda Polat
+                        </h3>
+
+                        <div class="team-role">
+                            President & Legal Representative
+                        </div>
+
+                        <p
+                            data-en="Experienced in international youth projects, project coordination and programme implementation, with a focus on youth empowerment, social inclusion and well-being."
+                            data-tr="Uluslararası gençlik projeleri, proje koordinasyonu ve program uygulamalarında deneyimli; gençlerin güçlendirilmesi, sosyal kapsayıcılık ve iyi yaşam alanlarına odaklanmaktadır.">
+
+                            Experienced in international youth projects,
+                            project coordination and programme implementation,
+                            with a focus on youth empowerment, social inclusion
+                            and well-being.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="team-card">
+
+                        <div class="team-photo"></div>
+
+                        <h3>
+                            Sören Andresen
+                        </h3>
+
+                        <div class="team-role">
+                            Youth Policy Expert & Project Counselor
+                        </div>
+
+                        <p
+                            data-en="An experienced Erasmus+ trainer and project coordinator working in youth work, education, human rights, social inclusion and international cooperation."
+                            data-tr="Gençlik çalışmaları, eğitim, insan hakları, sosyal kapsayıcılık ve uluslararası iş birliği alanlarında çalışan deneyimli Erasmus+ eğitmeni ve proje koordinatörüdür.">
+
+                            An experienced Erasmus+ trainer and project
+                            coordinator working in youth work, education,
+                            human rights, social inclusion and international
+                            cooperation.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="team-card">
+
+                        <div class="team-photo"></div>
+
+                        <h3>
+                            Ebutalip Polat
+                        </h3>
+
+                        <div class="team-role">
+                            Vice President
+                        </div>
+
+                        <p
+                            data-en="Responsible for digital communication, social media, dissemination activities and online outreach, supporting youth participation and digital inclusion."
+                            data-tr="Dijital iletişim, sosyal medya, yaygınlaştırma faaliyetleri ve çevrim içi iletişimden sorumludur; gençlerin katılımını ve dijital kapsayıcılığı desteklemektedir.">
+
+                            Responsible for digital communication, social media,
+                            dissemination activities and online outreach,
+                            supporting youth participation and digital
+                            inclusion.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SPONSORS
+        ========================= -->
+
+        <section class="sponsors"
+            id="sponsors">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label"
+                        data-en="Our Sponsors"
+                        data-tr="Sponsorlarımız">
+
+                        Our Sponsors
+
+                    </span>
+
+                    <h2
+                        data-en="Together, we create impact."
+                        data-tr="Birlikte etki oluşturuyoruz.">
+
+                        Together, we create impact.
+
+                    </h2>
+
+                    <p
+                        data-en="We value cooperation with organisations and partners who support youth, community and environmental initiatives."
+                        data-tr="Gençlik, toplum ve çevre çalışmalarını destekleyen kuruluşlar ve paydaşlarla iş birliğine önem veriyoruz.">
+
+                        We value cooperation with organisations and partners
+                        who support youth, community and environmental
+                        initiatives.
+
+                    </p>
+
+                </div>
+
+
+                <!-- KESİNTİSİZ KAYAN SPONSOR BANDI -->
+
+                <div class="sponsors-grid">
+
+                    <div class="sponsors-track">
+
+
+                        <!-- 1. SPONSOR SETİ -->
+
+                        <div class="sponsor-set">
+
+                            <div class="sponsor">
+
+                                <img
+                                    src="sponsor.webp"
+                                    alt="Sponsor 1">
+
+                            </div>
+
+
+                            <div class="sponsor">
+
+                                <img
+                                    src="sponsorr.webp"
+                                    alt="Sponsor 2">
+
+                            </div>
+
+
+                            <div class="sponsor">
+
+                                <img
+                                    src="sponsorrr.webp"
+                                    alt="Sponsor 3">
+
+                            </div>
+
+
+                            <div class="sponsor">
+
+                                <img
+                                    src="sponsorrrr.webp"
+                                    alt="Sponsor 4">
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- 2. AYNI SET: KESİNTİSİZ DÖNGÜ İÇİN -->
+
+                        <div class="sponsor-set">
+
+                            <div class="sponsor">
+
+                                <img
+                                    src="sponsor.webp"
+                                    alt="Sponsor 1">
+
+                            </div>
+
+
+                            <div class="sponsor">
+
+                                <img
+                                    src="sponsorr.webp"
+                                    alt="Sponsor 2">
+
+                            </div>
+
+
+                            <div class="sponsor">
+
+                                <img
+                                    src="sponsorrr.webp"
+                                    alt="Sponsor 3">
+
+                            </div>
+
+
+                            <div class="sponsor">
+
+                                <img
+                                    src="sponsorrrr.webp"
+                                    alt="Sponsor 4">
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CONTACT
+        ========================= -->
+
+        <section class="contact"
+            id="contact">
+
+            <div class="container">
+
+                <div class="contact-grid">
+
+
+                    <div>
+
+                        <span class="section-label"
+                            data-en="Contact Us"
+                            data-tr="İletişim">
+
+                            Contact Us
+
+                        </span>
+
+                        <h2
+                            data-en="Let's build meaningful opportunities for young people."
+                            data-tr="Gençler için anlamlı fırsatları birlikte oluşturalım.">
+
+                            Let's build meaningful opportunities
+                            for young people.
+
+                        </h2>
+
+
+                        <p class="contact-intro"
+                            data-en="Interested in cooperation, Erasmus+ projects or youth initiatives? Get in touch with our team."
+                            data-tr="İş birliği, Erasmus+ projeleri veya gençlik çalışmalarıyla mı ilgileniyorsunuz? Ekibimizle iletişime geçin.">
+
+                            Interested in cooperation, Erasmus+ projects or
+                            youth initiatives? Get in touch with our team.
+
+                        </p>
+
+
+                        <div class="contact-list">
+
+
+                            <div class="contact-item">
+
+                                <div class="contact-icon">
+                                    ✉
+                                </div>
+
+                                <div>
+
+                                    <small>
+                                        Legal Representative
+                                    </small>
+
+                                    <a href="mailto:ilaydapolat023@gmail.com">
+                                        ilaydapolat023@gmail.com
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="contact-item">
+
+                                <div class="contact-icon">
+                                    ☎
+                                </div>
+
+                                <div>
+
+                                    <small>
+                                        Phone
+                                    </small>
+
+                                    <a href="tel:+4917646652423">
+                                        +49 176 466 52423
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="contact-item">
+
+                                <div class="contact-icon">
+                                    ✉
+                                </div>
+
+                                <div>
+
+                                    <small>
+                                        Contact Person
+                                    </small>
+
+                                    <a href="mailto:runejugendhh@gmail.com">
+                                        runejugendhh@gmail.com
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="contact-item">
+
+                                <div class="contact-icon">
+                                    ☎
+                                </div>
+
+                                <div>
+
+                                    <small>
+                                        Contact Phone
+                                    </small>
+
+                                    <a href="tel:+4915752468268">
+                                        +49 157 524 68268
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="contact-item">
+
+                                <div class="contact-icon">
+                                    ◎
+                                </div>
+
+                                <div>
+
+                                    <small
+                                        data-en="Instagram"
+                                        data-tr="Instagram">
+
+                                        Instagram
+
+                                    </small>
+
+                                    <a
+                                        href="https://www.instagram.com/grune_jugend/"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+
+                                        @grune_jugend
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-box">
+
+                        <h3
+                            data-en="Let's work together."
+                            data-tr="Birlikte çalışalım.">
+
+                            Let's work together.
+
+                        </h3>
+
+                        <p
+                            data-en="We are open to international partnerships, youth projects, educational activities and cooperation opportunities."
+                            data-tr="Uluslararası ortaklıklara, gençlik projelerine, eğitim faaliyetlerine ve iş birliği fırsatlarına açığız.">
+
+                            We are open to international partnerships, youth
+                            projects, educational activities and cooperation
+                            opportunities.
+
+                        </p>
+
+
+                        <a
+                            href="mailto:runejugendhh@gmail.com"
+                            class="btn btn-primary"
+                            data-en="Send an Email"
+                            data-tr="E-posta Gönder">
+
+                            Send an Email
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                Kreativer Grünen Jugendakademieverein e.V.
+            </div>
+
+            <div class="footer-copy">
+                © 2026 Kreativer Grünen Jugendakademieverein e.V. All rights reserved.
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        /* =========================
+           MOBILE MENU
+        ========================= */
+
+        const hamburger =
+            document.getElementById("hamburger");
+
+        const mobileMenu =
+            document.getElementById("mobileMenu");
+
+
+        hamburger.addEventListener("click", () => {
+
+            mobileMenu.classList.toggle("active");
+
+        });
+
+
+        document
+            .querySelectorAll(".mobile-menu a")
+            .forEach(link => {
+
+                link.addEventListener("click", () => {
+
+                    mobileMenu.classList.remove("active");
+
+                });
+
+            });
+
+
+
+        /* =========================
+           LANGUAGE SWITCHER
+        ========================= */
+
+        let currentLanguage = "en";
+
+
+        const languageButtons =
+            document.querySelectorAll(".lang-btn");
+
+
+        function changeLanguage(language) {
+
+            currentLanguage = language;
+
+            document.documentElement.lang = language;
+
+
+            document
+                .querySelectorAll("[data-en]")
+                .forEach(element => {
+
+                    const translation =
+                        element.getAttribute("data-" + language);
+
+                    if (translation) {
+
+                        element.innerHTML = translation;
+
+                    }
+
+                });
+
+
+            languageButtons.forEach(button => {
+
+                button.classList.remove("active");
+
+                if (button.dataset.lang === language) {
+
+                    button.classList.add("active");
+
+                }
+
+            });
+
+        }
+
+
+        languageButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                changeLanguage(button.dataset.lang);
+
+            });
+
+        });
+
+
+
+        /* =========================
+           HEADER SCROLL
+        ========================= */
+
+        window.addEventListener("scroll", () => {
+
+            const header =
+                document.querySelector("header");
+
+
+            if (window.scrollY > 50) {
+
+                header.style.boxShadow =
+                    "0 5px 25px rgba(0,0,0,0.07)";
+
+            } else {
+
+                header.style.boxShadow =
+                    "none";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
