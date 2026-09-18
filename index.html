@@ -468,7 +468,7 @@
         .focus-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
+            gap: 24px;
         }
 
         .focus-card {
@@ -478,6 +478,10 @@
             transition: 0.35s ease;
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 100%;
         }
 
         .focus-card::before {
@@ -501,14 +505,17 @@
 
         .focus-card h3 {
             font-family: "Playfair Display", serif;
-            font-size: 23px;
+            font-size: 21px;
             color: var(--red);
             margin-bottom: 12px;
+            line-height: 1.25;
+            white-space: nowrap;
         }
 
         .focus-card p {
             color: var(--gray);
             font-size: 14px;
+            line-height: 1.6;
         }
 
 
@@ -882,7 +889,7 @@
             }
 
 
-            /* MOBİL HERO - GÖRSEL YAZININ DİREKT ARKASINDA */
+            /* MOBİL HERO - İLK.WEBP ARKA PLAN GÖRSELİ */
 
             .hero {
                 min-height: 820px;
@@ -890,12 +897,11 @@
                 background:
                     linear-gradient(
                         180deg,
-                        rgba(255,255,255,0.28) 0%,
-                        rgba(255,255,255,0.18) 35%,
-                        rgba(255,255,255,0.10) 65%,
-                        rgba(255,255,255,0.20) 100%
+                        rgba(255,255,255,0.88) 0%,
+                        rgba(255,255,255,0.78) 40%,
+                        rgba(255,255,255,0.65) 100%
                     ),
-                    url("hero.jpg") center center/cover no-repeat;
+                    url("ilk.webp") center center/cover no-repeat;
 
                 align-items: flex-start;
             }
@@ -906,16 +912,10 @@
 
             .hero h1 {
                 font-size: 50px;
-                text-shadow: 0 2px 12px rgba(255,255,255,0.65);
             }
 
             .hero-description {
                 font-size: 16px;
-                text-shadow: 0 1px 8px rgba(255,255,255,0.75);
-            }
-
-            .hero-small {
-                text-shadow: 0 1px 8px rgba(255,255,255,0.75);
             }
 
             section {
@@ -938,6 +938,12 @@
 
             .focus-grid {
                 grid-template-columns: 1fr 1fr;
+                gap: 18px;
+            }
+
+            .focus-card h3 {
+                white-space: normal;
+                font-size: 19px;
             }
 
             .project-main-image {
@@ -987,12 +993,11 @@
                 background:
                     linear-gradient(
                         180deg,
-                        rgba(255,255,255,0.25) 0%,
-                        rgba(255,255,255,0.15) 40%,
-                        rgba(255,255,255,0.10) 70%,
-                        rgba(255,255,255,0.18) 100%
+                        rgba(255,255,255,0.88) 0%,
+                        rgba(255,255,255,0.78) 40%,
+                        rgba(255,255,255,0.65) 100%
                     ),
-                    url("hero.jpg") center center/cover no-repeat;
+                    url("ilk.webp") center center/cover no-repeat;
             }
 
             .hero-content {
@@ -1023,10 +1028,15 @@
 
             .focus-grid {
                 grid-template-columns: 1fr;
+                gap: 16px;
             }
 
             .focus-card {
-                padding: 30px 24px;
+                padding: 28px 22px;
+            }
+
+            .focus-card h3 {
+                white-space: normal;
             }
 
             .project-content {
