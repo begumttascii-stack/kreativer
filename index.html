@@ -13,6 +13,40 @@
     <meta name="keywords"
         content="Kreativer Grünen, Jugendakademieverein, youth, climate action, environment, Erasmus+, youth exchange, Germany, NGO">
 
+    <meta name="robots" content="index, follow">
+
+    <meta name="author" content="Kreativer Grünen Jugendakademieverein e.V.">
+
+    <link rel="canonical"
+        href="https://www.kreativer-gruenen.de/">
+
+    <meta property="og:title"
+        content="Kreativer Grünen Jugendakademieverein e.V. | Youth, Climate & Community">
+
+    <meta property="og:description"
+        content="Kreativer Grünen Jugendakademieverein e.V. is a non-profit youth organisation focusing on environmental protection, climate action, youth empowerment, inclusion and international cooperation.">
+
+    <meta property="og:type"
+        content="website">
+
+    <meta property="og:url"
+        content="https://www.kreativer-gruenen.de/">
+
+    <meta property="og:image"
+        content="https://www.kreativer-gruenen.de/ilk.webp">
+
+    <meta name="twitter:card"
+        content="summary_large_image">
+
+    <meta name="twitter:title"
+        content="Kreativer Grünen Jugendakademieverein e.V.">
+
+    <meta name="twitter:description"
+        content="Youth, climate action, environmental protection, inclusion and international cooperation.">
+
+    <meta name="twitter:image"
+        content="https://www.kreativer-gruenen.de/ilk.webp">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -98,7 +132,6 @@
             gap: 14px;
         }
 
-        /* LOGO SABİT */
         .brand img {
             width: 72px;
             height: 72px;
@@ -111,7 +144,6 @@
             line-height: 1.15;
         }
 
-        /* KREATIVER GRÜNEN KIRMIZI */
         .brand-name {
             font-family: "Playfair Display", serif;
             font-size: 18px;
@@ -119,7 +151,6 @@
             color: var(--red);
         }
 
-        /* ALT YAZI TAM SİYAH */
         .brand-subtitle {
             font-size: 10px;
             color: #000000;
@@ -407,7 +438,6 @@
             max-width: 850px;
         }
 
-        /* VISION KUTUSU */
         .about-highlight {
             margin-top: 32px;
             padding: 24px 26px;
@@ -595,67 +625,6 @@
 
 
         /* =========================
-           TEAM
-        ========================= */
-
-        .team {
-            background: var(--cream);
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .team-card {
-            background: white;
-            padding: 30px;
-            border: 1px solid var(--border);
-        }
-
-        .team-photo {
-            height: 260px;
-            background: #e9e5df;
-            background-position: center;
-            background-size: cover;
-            margin-bottom: 25px;
-        }
-
-        .team-card:nth-child(1) .team-photo {
-            background-image: url("ilayda.jpg");
-        }
-
-        .team-card:nth-child(2) .team-photo {
-            background-image: url("soren.jpg");
-        }
-
-        .team-card:nth-child(3) .team-photo {
-            background-image: url("eblutalip.jpg");
-        }
-
-        .team-card h3 {
-            font-family: "Playfair Display", serif;
-            color: var(--red);
-            font-size: 25px;
-        }
-
-        .team-role {
-            color: var(--gold);
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin: 5px 0 15px;
-        }
-
-        .team-card p {
-            color: var(--gray);
-            font-size: 14px;
-        }
-
-
-        /* =========================
            SPONSORS
         ========================= */
 
@@ -678,7 +647,6 @@
             font-size: 15px;
         }
 
-        /* KESİNTİSİZ YATAY SPONSOR BANDI */
         .sponsors-grid {
             width: 100vw;
             margin-left: calc(50% - 50vw);
@@ -725,7 +693,6 @@
             object-fit: contain;
         }
 
-        /* TAMAMEN KESİNTİSİZ LOOP */
         @keyframes sponsorSlide {
             from {
                 transform: translateX(0);
@@ -915,17 +882,20 @@
             }
 
 
+            /* MOBİL HERO - GÖRSEL YAZININ DİREKT ARKASINDA */
+
             .hero {
                 min-height: 820px;
 
                 background:
                     linear-gradient(
                         180deg,
-                        rgba(255,255,255,0.93) 0%,
-                        rgba(255,255,255,0.78) 45%,
-                        rgba(255,255,255,0.15) 100%
+                        rgba(255,255,255,0.28) 0%,
+                        rgba(255,255,255,0.18) 35%,
+                        rgba(255,255,255,0.10) 65%,
+                        rgba(255,255,255,0.20) 100%
                     ),
-                    url("hero.jpg") center/cover no-repeat;
+                    url("hero.jpg") center center/cover no-repeat;
 
                 align-items: flex-start;
             }
@@ -936,10 +906,16 @@
 
             .hero h1 {
                 font-size: 50px;
+                text-shadow: 0 2px 12px rgba(255,255,255,0.65);
             }
 
             .hero-description {
                 font-size: 16px;
+                text-shadow: 0 1px 8px rgba(255,255,255,0.75);
+            }
+
+            .hero-small {
+                text-shadow: 0 1px 8px rgba(255,255,255,0.75);
             }
 
             section {
@@ -968,11 +944,6 @@
                 min-height: 400px;
             }
 
-            .team-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            /* Sponsorlar mobilde de kayan bant olarak kalır */
             .sponsors-grid {
                 width: 100vw;
                 margin-left: calc(50% - 50vw);
@@ -1012,6 +983,16 @@
 
             .hero {
                 min-height: 780px;
+
+                background:
+                    linear-gradient(
+                        180deg,
+                        rgba(255,255,255,0.25) 0%,
+                        rgba(255,255,255,0.15) 40%,
+                        rgba(255,255,255,0.10) 70%,
+                        rgba(255,255,255,0.18) 100%
+                    ),
+                    url("hero.jpg") center center/cover no-repeat;
             }
 
             .hero-content {
@@ -1040,8 +1021,7 @@
                 margin-bottom: 38px;
             }
 
-            .focus-grid,
-            .team-grid {
+            .focus-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1469,10 +1449,10 @@
                     <div class="focus-card">
 
                         <h3
-                            data-en="Environment &amp; Climate"
+                            data-en="Environment & Climate"
                             data-tr="Çevre ve İklim">
 
-                            Environment &amp; Climate
+                            Environment & Climate
 
                         </h3>
 
@@ -1515,10 +1495,10 @@
                     <div class="focus-card">
 
                         <h3
-                            data-en="Inclusion &amp; Equality"
+                            data-en="Inclusion & Equality"
                             data-tr="Kapsayıcılık ve Eşitlik">
 
-                            Inclusion &amp; Equality
+                            Inclusion & Equality
 
                         </h3>
 
@@ -1561,10 +1541,10 @@
                     <div class="focus-card">
 
                         <h3
-                            data-en="Arts &amp; Culture"
+                            data-en="Arts & Culture"
                             data-tr="Sanat ve Kültür">
 
-                            Arts &amp; Culture
+                            Arts & Culture
 
                         </h3>
 
@@ -1584,10 +1564,10 @@
                     <div class="focus-card">
 
                         <h3
-                            data-en="Sports &amp; Well-being"
+                            data-en="Sports & Well-being"
                             data-tr="Spor ve İyi Yaşam">
 
-                            Sports &amp; Well-being
+                            Sports & Well-being
 
                         </h3>
 
@@ -1775,133 +1755,6 @@
 
 
         <!-- =========================
-             TEAM
-        ========================= -->
-
-        <section class="team">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <span class="section-label"
-                        data-en="Our Team"
-                        data-tr="Ekibimiz">
-
-                        Our Team
-
-                    </span>
-
-                    <h2
-                        data-en="People behind the work."
-                        data-tr="Çalışmalarımızın arkasındaki ekip.">
-
-                        People behind the work.
-
-                    </h2>
-
-                    <p
-                        data-en="Our team brings together experience in youth work, international cooperation, education, communication and project management."
-                        data-tr="Ekibimiz gençlik çalışmaları, uluslararası iş birliği, eğitim, iletişim ve proje yönetimi alanlarında deneyimleri bir araya getiriyor.">
-
-                        Our team brings together experience in youth work,
-                        international cooperation, education, communication
-                        and project management.
-
-                    </p>
-
-                </div>
-
-
-                <div class="team-grid">
-
-
-                    <div class="team-card">
-
-                        <div class="team-photo"></div>
-
-                        <h3>
-                            Ilayda Polat
-                        </h3>
-
-                        <div class="team-role">
-                            President & Legal Representative
-                        </div>
-
-                        <p
-                            data-en="Experienced in international youth projects, project coordination and programme implementation, with a focus on youth empowerment, social inclusion and well-being."
-                            data-tr="Uluslararası gençlik projeleri, proje koordinasyonu ve program uygulamalarında deneyimli; gençlerin güçlendirilmesi, sosyal kapsayıcılık ve iyi yaşam alanlarına odaklanmaktadır.">
-
-                            Experienced in international youth projects,
-                            project coordination and programme implementation,
-                            with a focus on youth empowerment, social inclusion
-                            and well-being.
-
-                        </p>
-
-                    </div>
-
-
-                    <div class="team-card">
-
-                        <div class="team-photo"></div>
-
-                        <h3>
-                            Sören Andresen
-                        </h3>
-
-                        <div class="team-role">
-                            Youth Policy Expert & Project Counselor
-                        </div>
-
-                        <p
-                            data-en="An experienced Erasmus+ trainer and project coordinator working in youth work, education, human rights, social inclusion and international cooperation."
-                            data-tr="Gençlik çalışmaları, eğitim, insan hakları, sosyal kapsayıcılık ve uluslararası iş birliği alanlarında çalışan deneyimli Erasmus+ eğitmeni ve proje koordinatörüdür.">
-
-                            An experienced Erasmus+ trainer and project
-                            coordinator working in youth work, education,
-                            human rights, social inclusion and international
-                            cooperation.
-
-                        </p>
-
-                    </div>
-
-
-                    <div class="team-card">
-
-                        <div class="team-photo"></div>
-
-                        <h3>
-                            Ebutalip Polat
-                        </h3>
-
-                        <div class="team-role">
-                            Vice President
-                        </div>
-
-                        <p
-                            data-en="Responsible for digital communication, social media, dissemination activities and online outreach, supporting youth participation and digital inclusion."
-                            data-tr="Dijital iletişim, sosyal medya, yaygınlaştırma faaliyetleri ve çevrim içi iletişimden sorumludur; gençlerin katılımını ve dijital kapsayıcılığı desteklemektedir.">
-
-                            Responsible for digital communication, social media,
-                            dissemination activities and online outreach,
-                            supporting youth participation and digital
-                            inclusion.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
              SPONSORS
         ========================= -->
 
@@ -1941,96 +1794,66 @@
                 </div>
 
 
-                <!-- KESİNTİSİZ KAYAN SPONSOR BANDI -->
-
                 <div class="sponsors-grid">
 
                     <div class="sponsors-track">
 
-
-                        <!-- 1. SPONSOR SETİ -->
-
                         <div class="sponsor-set">
 
                             <div class="sponsor">
-
                                 <img
                                     src="sponsor.webp"
                                     alt="Sponsor 1">
-
                             </div>
 
-
                             <div class="sponsor">
-
                                 <img
                                     src="sponsorr.webp"
                                     alt="Sponsor 2">
-
                             </div>
 
-
                             <div class="sponsor">
-
                                 <img
                                     src="sponsorrr.webp"
                                     alt="Sponsor 3">
-
                             </div>
 
-
                             <div class="sponsor">
-
                                 <img
                                     src="sponsorrrr.webp"
                                     alt="Sponsor 4">
-
                             </div>
 
                         </div>
 
 
-                        <!-- 2. AYNI SET: KESİNTİSİZ DÖNGÜ İÇİN -->
-
                         <div class="sponsor-set">
 
                             <div class="sponsor">
-
                                 <img
                                     src="sponsor.webp"
                                     alt="Sponsor 1">
-
                             </div>
 
-
                             <div class="sponsor">
-
                                 <img
                                     src="sponsorr.webp"
                                     alt="Sponsor 2">
-
                             </div>
 
-
                             <div class="sponsor">
-
                                 <img
                                     src="sponsorrr.webp"
                                     alt="Sponsor 3">
-
                             </div>
 
-
                             <div class="sponsor">
-
                                 <img
                                     src="sponsorrrr.webp"
                                     alt="Sponsor 4">
-
                             </div>
 
                         </div>
-
 
                     </div>
 
@@ -2052,7 +1875,6 @@
             <div class="container">
 
                 <div class="contact-grid">
-
 
                     <div>
 
@@ -2085,7 +1907,6 @@
 
 
                         <div class="contact-list">
-
 
                             <div class="contact-item">
 
@@ -2199,7 +2020,6 @@
                                 </div>
 
                             </div>
-
 
                         </div>
 
